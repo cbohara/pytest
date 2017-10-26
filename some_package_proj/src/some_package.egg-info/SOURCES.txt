@@ -1,0 +1,8 @@
+README.txt
+setup.py
+src/some_package/__init__.py
+src/some_package/some_module.py
+src/some_package.egg-info/PKG-INFO
+src/some_package.egg-info/SOURCES.txt
+src/some_package.egg-info/dependency_links.txt
+src/some_package.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: some-package
+Version: 1.0
+Summary: Demostrate packaging and distribution
+Home-page: https://github.com/cbohara/pytest
+Author: Charlie O'Hara
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
