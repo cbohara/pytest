@@ -3,12 +3,6 @@ import pytest
 import tasks
 from tasks import Task
 
-@pytest.fixture(autouse=True)
-def initialized_tasks_db(tmpdir):
-    """Connect to db before testing and disconnect after"""
-    tasks.start_tasks_db(str(tmpdir), 'tiny')
-    yield
-    tasks.stop_tasks_db()
 
 def equivalent(t1, t2):
     """Check 2 tasks for equivalence"""
@@ -17,13 +11,18 @@ def equivalent(t1, t2):
             (t1.owner == t2.owner) and
             (t1.done == t2.done))
 
-def test_add():
+
+def test_add(tasks_db):
     """tasks.get() using id returned from add() works"""
+    # GIVEN an initialized db
+    # WHEN a tasks is added to the database
     task = Task('breath', 'Charlie', True)
     task_id = tasks.add(task)
+    # THEN the task retrieved from the db should match the task just added 
     t_from_db = tasks.get(task_id)
     # everything but the id should be the same
     assert equivalent(t_from_db, task)
+
 
 @pytest.mark.parametrize('task',
                          [Task('sleep', done=True),
@@ -35,6 +34,7 @@ def test_add_many_alt1(task):
     task_id = tasks.add(task)
     t_from_db = tasks.get(task_id)
     assert equivalent(t_from_db, task)
+
 
 @pytest.mark.parametrize('summary, owner, done',
                         [('sleep', None, False),
