@@ -27,6 +27,8 @@ pytest test discovery
     test methods and functions test_
     test classes TestSomething
 
+    $ pytest --collect-only will show all tests
+
 outcomes
     .   passed 
     F   failed 
@@ -89,46 +91,51 @@ pytest --tb=line
 Appendix 4 Packaging and Distributing Python Projects
 ######################################################
 
-make a module installable with pip 
-    some_module_project/
-        setup.py
-        some_module.py
+Includes notes from official documentation
+https://docs.python.org/3/tutorial/modules.html#packages
 
-    need setup.py to specify the name of the module that will be imported
-    $ pip install ./some_module_project
-    $ python
-    >>> from some_module import some_func
+packages = collection of modules
+module = python file
+
+__init__.py 
+    required to make Python treat the directory as a package
+    allows you to import modules within the package
+    can be an empty file
+    can also execute initialization code
+        ex: import things, load things into path, etc
+
+setup.py
+    setup script 
+    builds, distributes, and installs modules using Distutils
+    describe module distribution to Distutils
 
 make a package (contains multiple modules) installable with pip
     need to add __init__.py in the same dir as the module
     
-    some_package_project
-        setup.py
-        src
-            some_package
-                __init__.py
-                some_module.py
+some_package_project
+    setup.py                    # setup script makes it possible to build, distribute, and install python modules
+    src
+        some_package
+            __init__.py         # required to treat directory as a package - allows you to import modules from package
+            some_module.py
 
-    __init__.py needs to be written to expose the module functionality to the outside world
-    setup.py needs to specify the name of the modules as well as where to find the modules 
+create source distribution
+    create your own stash of local project packages for your team
+        $ python setup.py sdist
+    sdist 
+        will create an archive file
+        allows end user to install module 
+        by downloading the archive file, unpacking it, and from the within the module directory run
+        $ python setup.py install
 
-    $ pip install ./some_package_project
-    $ python
-    >>> from some_module import some_func
-
-
-create source distribution and a wheel 
-    create your own stash of local projectect packages from your team
-    install easily
-    $ python setup.py sdist bdist_wheel
         
 ###########################
 Ch 2 Writing Test Functions
 ###########################
 
 best practice = install modules locally using pip
-using -e allows me to modify the source code while tasks is installed
-$ pip install -e ./tasks_project/
+    using -e allows me to modify the source code while tasks is installed
+    $ pip install -e ./tasks_project/
 
 exact line of failure is shown with >
 # lines show you extra info about the assert failure
@@ -145,7 +152,7 @@ smoke test
 fixture preview
     autouse = all tests in the file will use the fixture
     code before yield runs before each test
-    the code after yield runs fater each test
+    the code after yield runs after each test
 
 skipping tests
     @pytest.skip(reason='some reason')
@@ -159,6 +166,9 @@ marking tests as expecting to fail
     if it returns x then you marked a test you expected to fail and indeed failed
     if it returns X then you marked a test you expected to fail BUT it did not = problematic
 
-test class
-    logically group together tasks
-    $ pytest -v test_api_exceptions.py::TestUpdate
+#####################
+Ch 3 pytest Fixtures
+#####################
+
+$ pytest --setup-show 
+    shows all the setup and teardown of fixtures 
