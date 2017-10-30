@@ -172,3 +172,7 @@ Ch 3 pytest Fixtures
 
 $ pytest --setup-show 
     shows all the setup and teardown of fixtures 
+
+$ pytest -v --tb=no
+    shows all the tests and their parameters
+    without repetitive traceback errors
