@@ -3,22 +3,26 @@ import tasks
 from tasks import Task
 
 
-@pytest.fixture(scope='session')
-def tasks_db_session(tmpdir_factory):
-    """Connect to db before tests, disconnect after"""
-    temp_dir = tmpdir_factory.mktemp('temp')
-    tasks.start_tasks_db(str(temp_dir), 'tiny')
-    yield
+@pytest.fixture()
+def tasks_db(tmpdir):
+    """Connect to db before test, disconnect after"""
+    # setup
+    # the value of tmpdir is an object that represents a directory
+    # use str to pass the filepath to the start_tasks_db function
+    tasks.start_tasks_db(str(tmpdir), 'tiny')
+    yield   # this is where the testing happens
+    # teardown is guaranteed to run regardless of what happens with the tests
     tasks.stop_tasks_db()
 
 
+# Reminder of Task constructor interface
+# Task(summary=None, owner=None, done=False, id=None)
+# summary is required
+# owner and done are optional
+# id is set by database
+
+
 @pytest.fixture()
-def tasks_db(tasks_db_session):
-    """Empty tasks db"""
-    tasks.delete_all()
-
-
-@pytest.fixture(scope='session')
 def tasks_just_a_few():
     """All summaries and owners are unique."""
     return (
@@ -27,7 +31,7 @@ def tasks_just_a_few():
         Task('Fix what Brian did', 'Michelle', False))
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture()
 def tasks_mult_per_owner():
     """Several owners with several tasks each."""
     return (
@@ -46,13 +50,13 @@ def tasks_mult_per_owner():
 
 @pytest.fixture()
 def db_with_3_tasks(tasks_db, tasks_just_a_few):
-    """Connected db with 3 tasks, all unique."""
+    """Connect to db with 3 unique tasks"""
     for t in tasks_just_a_few:
         tasks.add(t)
 
 
 @pytest.fixture()
-def db_with_multi_per_owner(tasks_db, tasks_mult_per_owner):
-    """Connected db with 9 tasks, 3 owners, all with 3 tasks."""
+def db_with_multiple_per_owner(tasks_db, tasks_mult_per_owner):
+    """Connect db with 9 tasks, 3 owners, all with 3 tasks"""
     for t in tasks_mult_per_owner:
         tasks.add(t)
