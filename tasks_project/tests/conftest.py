@@ -3,7 +3,6 @@ import tasks
 from tasks import Task
 
 
-#@pytest.fixture(scope='session', params=['tiny', 'mongo'])
 @pytest.fixture(scope='session', params=['tiny'])
 def tasks_db_session(tmpdir_factory, request):
     """Connect to db before tests, disconnect after"""
