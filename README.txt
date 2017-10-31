@@ -176,3 +176,21 @@ $ pytest --setup-show
 $ pytest -v --tb=no
     shows all the tests and their parameters
     without repetitive traceback errors
+
+######################
+Ch 4 Builtin Fixtures
+######################
+
+tmpdir and tmpdir_factory
+    tmpdir
+        create files or dirs used by a single test
+        function scope
+    tmpdir_factory
+        setup a directory for many tests
+        session scope
+
+        default basetemp is in /private/var/...
+        can override with pytest --basetemp=mydir
+
+        basedir is left alone after a session
+        pytest cleans them up 
