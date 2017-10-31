@@ -1,0 +1,8 @@
+click
+tinydb
+six
+pytest
+pytest-mock
+
+[mongo]
+pymongo

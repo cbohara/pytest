@@ -1,0 +1,11 @@
+actionid: py36
+msg: getenv
+cmdargs: ['/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py36/bin/pip', 'install', 'pytest']
+
+Collecting pytest
+  Using cached pytest-3.2.3-py2.py3-none-any.whl
+Collecting py>=1.4.33 (from pytest)
+  Using cached py-1.4.34-py2.py3-none-any.whl
+Requirement already satisfied: setuptools in ./.tox/py36/lib/python3.6/site-packages (from pytest)
+Installing collected packages: py, pytest
+Successfully installed py-1.4.34 pytest-3.2.3

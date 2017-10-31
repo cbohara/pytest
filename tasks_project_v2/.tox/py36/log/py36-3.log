@@ -1,0 +1,11 @@
+actionid: py36
+msg: envreport
+cmdargs: ['/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py36/bin/pip', 'freeze']
+
+click==6.7
+py==1.4.34
+pytest==3.2.3
+pytest-mock==1.6.3
+six==1.11.0
+tasks==0.1.1
+tinydb==3.6.0

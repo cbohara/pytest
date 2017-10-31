@@ -1,0 +1,28 @@
+actionid: py27
+msg: installpkg
+cmdargs: ['/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py27/bin/pip', 'install', '/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/dist/tasks-0.1.1.zip']
+
+Processing ./.tox/dist/tasks-0.1.1.zip
+Collecting click (from tasks==0.1.1)
+  Using cached click-6.7-py2.py3-none-any.whl
+Collecting tinydb (from tasks==0.1.1)
+Collecting six (from tasks==0.1.1)
+  Using cached six-1.11.0-py2.py3-none-any.whl
+Requirement already satisfied: pytest in ./.tox/py27/lib/python2.7/site-packages (from tasks==0.1.1)
+Collecting pytest-mock (from tasks==0.1.1)
+  Using cached pytest_mock-1.6.3-py2.py3-none-any.whl
+Requirement already satisfied: py>=1.4.33 in ./.tox/py27/lib/python2.7/site-packages (from pytest->tasks==0.1.1)
+Requirement already satisfied: setuptools in ./.tox/py27/lib/python2.7/site-packages (from pytest->tasks==0.1.1)
+Collecting mock; python_version == "2.6" or python_version == "2.7" (from pytest-mock->tasks==0.1.1)
+  Using cached mock-2.0.0-py2.py3-none-any.whl
+Collecting funcsigs>=1; python_version < "3.3" (from mock; python_version == "2.6" or python_version == "2.7"->pytest-mock->tasks==0.1.1)
+  Using cached funcsigs-1.0.2-py2.py3-none-any.whl
+Collecting pbr>=0.11 (from mock; python_version == "2.6" or python_version == "2.7"->pytest-mock->tasks==0.1.1)
+  Using cached pbr-3.1.1-py2.py3-none-any.whl
+Building wheels for collected packages: tasks
+  Running setup.py bdist_wheel for tasks: started
+  Running setup.py bdist_wheel for tasks: finished with status 'done'
+  Stored in directory: /Users/charlieohara/Library/Caches/pip/wheels/d1/58/b1/b7e4677cd2734d3dbf9ec3332567c0a9ebb101fb76f333230c
+Successfully built tasks
+Installing collected packages: click, tinydb, six, funcsigs, pbr, mock, pytest-mock, tasks
+Successfully installed click-6.7 funcsigs-1.0.2 mock-2.0.0 pbr-3.1.1 pytest-mock-1.6.3 six-1.11.0 tasks-0.1.1 tinydb-3.6.0

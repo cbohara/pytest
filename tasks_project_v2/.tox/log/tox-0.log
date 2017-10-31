@@ -1,0 +1,81 @@
+actionid: tox
+msg: packaging
+cmdargs: ['/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/venv/bin/python2.7', local('/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/dist')]
+
+running sdist
+running egg_info
+writing requirements to src/tasks.egg-info/requires.txt
+writing src/tasks.egg-info/PKG-INFO
+writing top-level names to src/tasks.egg-info/top_level.txt
+writing dependency_links to src/tasks.egg-info/dependency_links.txt
+writing entry points to src/tasks.egg-info/entry_points.txt
+reading manifest file 'src/tasks.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src/tasks.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating tasks-0.1.1
+creating tasks-0.1.1/src
+creating tasks-0.1.1/src/tasks
+creating tasks-0.1.1/src/tasks.egg-info
+creating tasks-0.1.1/tests
+creating tasks-0.1.1/tests/func
+creating tasks-0.1.1/tests/unit
+copying files to tasks-0.1.1...
+copying LICENSE -> tasks-0.1.1
+copying MANIFEST.in -> tasks-0.1.1
+copying setup.py -> tasks-0.1.1
+copying src/tasks/__init__.py -> tasks-0.1.1/src/tasks
+copying src/tasks/api.py -> tasks-0.1.1/src/tasks
+copying src/tasks/cli.py -> tasks-0.1.1/src/tasks
+copying src/tasks/config.py -> tasks-0.1.1/src/tasks
+copying src/tasks/tasksdb_pymongo.py -> tasks-0.1.1/src/tasks
+copying src/tasks/tasksdb_tinydb.py -> tasks-0.1.1/src/tasks
+copying src/tasks.egg-info/PKG-INFO -> tasks-0.1.1/src/tasks.egg-info
+copying src/tasks.egg-info/SOURCES.txt -> tasks-0.1.1/src/tasks.egg-info
+copying src/tasks.egg-info/dependency_links.txt -> tasks-0.1.1/src/tasks.egg-info
+copying src/tasks.egg-info/entry_points.txt -> tasks-0.1.1/src/tasks.egg-info
+copying src/tasks.egg-info/requires.txt -> tasks-0.1.1/src/tasks.egg-info
+copying src/tasks.egg-info/top_level.txt -> tasks-0.1.1/src/tasks.egg-info
+copying tests/conftest.py -> tasks-0.1.1/tests
+copying tests/func/__init__.py -> tasks-0.1.1/tests/func
+copying tests/func/test_add.py -> tasks-0.1.1/tests/func
+copying tests/func/test_add_variety.py -> tasks-0.1.1/tests/func
+copying tests/func/test_add_variety2.py -> tasks-0.1.1/tests/func
+copying tests/func/test_api_exceptions.py -> tasks-0.1.1/tests/func
+copying tests/func/test_unique_id.py -> tasks-0.1.1/tests/func
+copying tests/unit/__init__.py -> tasks-0.1.1/tests/unit
+copying tests/unit/test_cli.py -> tasks-0.1.1/tests/unit
+copying tests/unit/test_task.py -> tasks-0.1.1/tests/unit
+Writing tasks-0.1.1/setup.cfg
+creating .tox/dist
+creating '.tox/dist/tasks-0.1.1.zip' and adding 'tasks-0.1.1' to it
+adding 'tasks-0.1.1/LICENSE'
+adding 'tasks-0.1.1/MANIFEST.in'
+adding 'tasks-0.1.1/PKG-INFO'
+adding 'tasks-0.1.1/setup.cfg'
+adding 'tasks-0.1.1/setup.py'
+adding 'tasks-0.1.1/src/tasks/__init__.py'
+adding 'tasks-0.1.1/src/tasks/api.py'
+adding 'tasks-0.1.1/src/tasks/cli.py'
+adding 'tasks-0.1.1/src/tasks/config.py'
+adding 'tasks-0.1.1/src/tasks/tasksdb_pymongo.py'
+adding 'tasks-0.1.1/src/tasks/tasksdb_tinydb.py'
+adding 'tasks-0.1.1/src/tasks.egg-info/dependency_links.txt'
+adding 'tasks-0.1.1/src/tasks.egg-info/entry_points.txt'
+adding 'tasks-0.1.1/src/tasks.egg-info/PKG-INFO'
+adding 'tasks-0.1.1/src/tasks.egg-info/requires.txt'
+adding 'tasks-0.1.1/src/tasks.egg-info/SOURCES.txt'
+adding 'tasks-0.1.1/src/tasks.egg-info/top_level.txt'
+adding 'tasks-0.1.1/tests/conftest.py'
+adding 'tasks-0.1.1/tests/func/__init__.py'
+adding 'tasks-0.1.1/tests/func/test_add.py'
+adding 'tasks-0.1.1/tests/func/test_add_variety.py'
+adding 'tasks-0.1.1/tests/func/test_add_variety2.py'
+adding 'tasks-0.1.1/tests/func/test_api_exceptions.py'
+adding 'tasks-0.1.1/tests/func/test_unique_id.py'
+adding 'tasks-0.1.1/tests/unit/__init__.py'
+adding 'tasks-0.1.1/tests/unit/test_cli.py'
+adding 'tasks-0.1.1/tests/unit/test_task.py'
+removing 'tasks-0.1.1' (and everything under it)

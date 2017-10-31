@@ -1,0 +1,9 @@
+actionid: py27
+msg: getenv
+cmdargs: ['/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/venv/bin/python2.7', '-m', 'virtualenv', '--python', '/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/venv/bin/python2.7', 'py27']
+
+Already using interpreter /Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/venv/bin/python2.7
+Using real prefix '/usr/local/Cellar/python/2.7.13_1/Frameworks/Python.framework/Versions/2.7'
+New python executable in /Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py27/bin/python2.7
+Also creating executable in /Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py27/bin/python
+Installing setuptools, pip, wheel...done.

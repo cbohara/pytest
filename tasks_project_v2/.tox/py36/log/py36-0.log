@@ -1,0 +1,9 @@
+actionid: py36
+msg: getenv
+cmdargs: ['/Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/venv/bin/python2.7', '-m', 'virtualenv', '--python', '/usr/local/bin/python3.6', 'py36']
+
+Using base prefix '/usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6'
+New python executable in /Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py36/bin/python3.6
+Also creating executable in /Users/charlieohara/Documents/Egnyte/Private/charlie.ohara/code/github/cbohara/pytest_notes/tasks_project_v2/.tox/py36/bin/python
+Installing setuptools, pip, wheel...done.
+Running virtualenv with interpreter /usr/local/bin/python3.6
